@@ -87,6 +87,7 @@ class MainActivity : ComponentActivity() {
 fun LoginScreen(viewModel: LoginViewModel = viewModel()) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    //para comprobar
 
     val uiState by viewModel.uiState.collectAsState()
     val scope = rememberCoroutineScope()
@@ -109,7 +110,7 @@ fun LoginScreen(viewModel: LoginViewModel = viewModel()) {
                 .verticalScroll(rememberScrollState())
         ) {
             Text(
-                text = "Welcome Back",
+                text = "Iniciar Sesión",
                 style = MaterialTheme.typography.headlineMedium, // Usa headlineMedium en lugar de h4
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(bottom = 24.dp)
